@@ -1,20 +1,25 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-
-// Container
-import ProjectsContainer from '../containers/ProjectsContainer';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Pages
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
+import Post from '../pages/Post';
+import Posts from '../pages/Posts';
+import Projects from '../pages/Projects';
+
 
 // Routes
 export default (
-  <Switch>
-    <Route exact path='/' component={ Home } />
-    <Route path='/about' component={ About } />
-    <Route path='/projects' component={ ProjectsContainer } />
-    <Route path='/contact' component={ Contact } />
-  </Switch>
+  <Router>
+    <Switch>
+      <Route exact path='/' component={ Home } />
+      <Route path='/about' component={ About } />
+      <Route path='/contact' component={ Contact } />
+      <Route path='/post/:id' component={ Post } />
+      <Route path='/post' component={ Posts } />
+      <Route path='/projects' component={ Projects } />
+    </Switch>
+  </Router>
 );
