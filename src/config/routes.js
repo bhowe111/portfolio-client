@@ -17,7 +17,7 @@ export default (
       <Route exact path='/' component={ Home } />
       <Route path='/about' component={ About } />
       <Route path='/contact' component={ Contact } />
-      <Route path='/post/:id' component={ Post } />
+      <Route path='/post/:slug' component={ Post } />
       <Route path='/post' component={ Posts } />
       <Route path='/projects' component={ Projects } />
     </Switch>
